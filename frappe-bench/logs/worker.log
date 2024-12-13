@@ -997,19 +997,19 @@ Traceback (most recent call last):
 redis.exceptions.ConnectionError: Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
 
 Error while reading from 127.0.0.1:11000 : (104, 'Connection reset by peer')
-2024-12-13 12:08:11,490 Worker rq:worker:bb12e5c255e84ff79239ab8074dcb918 started with PID 11041, version 1.16.2
-2024-12-13 12:08:11,490 Subscribing to channel rq:pubsub:bb12e5c255e84ff79239ab8074dcb918
-2024-12-13 12:08:11,491 *** Listening on home-habtamu-Desktop-frappe-frappe-bench:short, home-habtamu-Desktop-frappe-frappe-bench:default, home-habtamu-Desktop-frappe-frappe-bench:long...
-2024-12-13 12:08:11,491 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:short
-2024-12-13 12:08:11,492 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:default
-2024-12-13 12:08:11,493 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:long
-2024-12-13 12:08:44,897 Worker bb12e5c255e84ff79239ab8074dcb918 [PID 11041]: warm shut down requested
-2024-12-13 12:08:44,898 Unsubscribing from channel rq:pubsub:bb12e5c255e84ff79239ab8074dcb918
+2024-12-13 12:22:42,898 Worker rq:worker:7dd541d36d6643d3833bb0ad6d6ee5b6 started with PID 19896, version 1.16.2
+2024-12-13 12:22:42,898 Subscribing to channel rq:pubsub:7dd541d36d6643d3833bb0ad6d6ee5b6
+2024-12-13 12:22:42,900 *** Listening on home-habtamu-Desktop-frappe-frappe-bench:short, home-habtamu-Desktop-frappe-frappe-bench:default, home-habtamu-Desktop-frappe-frappe-bench:long...
+2024-12-13 12:22:42,900 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:short
+2024-12-13 12:22:42,901 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:default
+2024-12-13 12:22:42,902 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:long
+2024-12-13 12:22:45,823 Worker 7dd541d36d6643d3833bb0ad6d6ee5b6 [PID 19896]: warm shut down requested
+2024-12-13 12:22:45,824 Unsubscribing from channel rq:pubsub:7dd541d36d6643d3833bb0ad6d6ee5b6
 
 :: Error 111 connecting to 127.0.0.1:11000. Connection refused. ::
 
 Context:
- File '/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py', line 363
+ File '/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py', line 363
 
  358:                 lambda: self._connect(), lambda error: self.disconnect(error)
  359:             )
@@ -1025,18 +1025,18 @@ Context:
 
 Full traceback:
 Traceback (most recent call last):
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
     sock = self.retry.call_with_retry(
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
     return do()
            ^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
     lambda: self._connect(), lambda error: self.disconnect(error)
             ^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
     raise err
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
     sock.connect(socket_address)
 ConnectionRefusedError: [Errno 111] Connection refused
 
@@ -1046,52 +1046,60 @@ Traceback (most recent call last):
   File "/home/habtamu/Desktop/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 49, in invoke
     return super().invoke(ctx)
            ^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
     return _process_result(sub_ctx.command.invoke(sub_ctx))
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
     return ctx.invoke(self.callback, **ctx.params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 783, in invoke
     return __callback(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/habtamu/Desktop/frappe/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
     start_worker(
   File "/home/habtamu/Desktop/frappe/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 321, in start_worker
     worker.work(
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/rq/worker.py", line 458, in work
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/rq/worker.py", line 458, in work
     self.teardown()
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/rq/worker.py", line 1049, in teardown
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/rq/worker.py", line 1049, in teardown
     self.unsubscribe()
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/rq/worker.py", line 626, in unsubscribe
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/rq/worker.py", line 626, in unsubscribe
     self.pubsub.unsubscribe()
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 982, in unsubscribe
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 982, in unsubscribe
     return self.execute_command("UNSUBSCRIBE", *args)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 798, in execute_command
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 798, in execute_command
     self._execute(connection, connection.send_command, *args, **kwargs)
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 841, in _execute
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 841, in _execute
     return conn.retry.call_with_retry(
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/retry.py", line 65, in call_with_retry
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/retry.py", line 65, in call_with_retry
     fail(error)
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 843, in <lambda>
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 843, in <lambda>
     lambda error: self._disconnect_raise_connect(conn, error),
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 830, in _disconnect_raise_connect
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 830, in _disconnect_raise_connect
     raise error
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
     return do()
            ^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 842, in <lambda>
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/client.py", line 842, in <lambda>
     lambda: command(*args, **kwargs),
             ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 556, in send_command
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 556, in send_command
     self.send_packed_command(
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 526, in send_packed_command
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 526, in send_packed_command
     self.connect()
-  File "/home/habtamu/Desktop/frappe/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+  File "/home/habtamu/Desktop/frappe/frappe-bench/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
     raise ConnectionError(self._error_message(e))
 redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
 
 Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2024-12-13 12:27:09,640 Worker rq:worker:68a0f4668adc4741a757f7a1b92913dd started with PID 23376, version 1.16.2
+2024-12-13 12:27:09,640 Subscribing to channel rq:pubsub:68a0f4668adc4741a757f7a1b92913dd
+2024-12-13 12:27:09,643 *** Listening on home-habtamu-Desktop-frappe-frappe-bench:short, home-habtamu-Desktop-frappe-frappe-bench:default, home-habtamu-Desktop-frappe-frappe-bench:long...
+2024-12-13 12:27:09,644 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:short
+2024-12-13 12:27:09,645 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:default
+2024-12-13 12:27:09,647 Cleaning registries for queue: home-habtamu-Desktop-frappe-frappe-bench:long
+2024-12-13 12:27:42,985 Worker 68a0f4668adc4741a757f7a1b92913dd [PID 23376]: warm shut down requested
+2024-12-13 12:27:42,986 Unsubscribing from channel rq:pubsub:68a0f4668adc4741a757f7a1b92913dd
