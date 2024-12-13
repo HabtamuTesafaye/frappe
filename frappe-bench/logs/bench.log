@@ -103,3 +103,8 @@
 2024-12-13 11:58:00,132 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
 2024-12-13 11:58:00,151 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
 2024-12-13 12:00:01,651 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --verbose --site all backup
+2024-12-13 12:08:10,465 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 12:08:10,703 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 12:08:10,706 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 12:08:10,706 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 12:08:10,715 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
