@@ -1,0 +1,105 @@
+2024-12-13 09:47:45,062 DEBUG cd frappe-bench && python3 -m venv env
+2024-12-13 09:47:47,614 DEBUG cd frappe-bench && /home/habtamu/Desktop/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-12-13 09:47:49,222 DEBUG cd frappe-bench && /home/habtamu/Desktop/frappe/frappe-bench/env/bin/python -m pip install --quiet wheel
+2024-12-13 09:47:50,164 LOG Getting frappe
+2024-12-13 09:47:50,164 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2024-12-13 09:47:58,100 LOG Installing frappe
+2024-12-13 09:47:58,100 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench && /home/habtamu/Desktop/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/habtamu/Desktop/frappe/frappe-bench/apps/frappe 
+2024-12-13 09:48:41,612 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench/apps/frappe && yarn install --check-files
+2024-12-13 09:48:49,379 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench && sudo supervisorctl restart frappe:
+2024-12-13 09:48:49,637 WARNING cd /home/habtamu/Desktop/frappe/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-12-13 09:48:49,637 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-12-13 09:48:49,638 DEBUG cd frappe-bench && bench build
+2024-12-13 09:48:49,784 INFO /home/habtamu/Desktop/frappe/venv/bin/bench build
+2024-12-13 09:49:21,518 LOG setting up backups
+2024-12-13 09:49:21,527 LOG backups were set up
+2024-12-13 09:49:21,527 INFO Bench frappe-bench initialized
+2024-12-13 09:49:33,039 INFO /home/habtamu/Desktop/frappe/venv/bin/bench new-site demo.localhost --install-app builder
+2024-12-13 09:49:51,393 INFO /home/habtamu/Desktop/frappe/venv/bin/bench new-site demo.localhost --install-app builder
+2024-12-13 09:51:30,312 INFO /home/habtamu/Desktop/frappe/venv/bin/bench get-app builder
+2024-12-13 09:51:30,992 LOG Getting builder
+2024-12-13 09:51:30,992 DEBUG cd ./apps && git clone https://github.com/frappe/builder.git  --depth 1 --origin upstream
+2024-12-13 09:51:33,012 LOG Installing builder
+2024-12-13 09:51:33,012 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench && /home/habtamu/Desktop/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/habtamu/Desktop/frappe/frappe-bench/apps/builder 
+2024-12-13 09:51:35,391 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench/apps/builder && yarn install --check-files
+2024-12-13 09:51:42,912 DEBUG bench build --app builder
+2024-12-13 09:51:43,021 INFO /home/habtamu/Desktop/frappe/venv/bin/bench build --app builder
+2024-12-13 09:51:55,567 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench && sudo supervisorctl restart frappe:
+2024-12-13 09:51:55,731 WARNING cd /home/habtamu/Desktop/frappe/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-12-13 09:51:55,731 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-12-13 09:52:05,533 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --site list
+2024-12-13 09:52:17,407 INFO /home/habtamu/Desktop/frappe/venv/bin/bench new-site demo.localhost --install-app builder
+2024-12-13 09:53:07,047 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 09:53:07,248 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 09:53:07,250 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 09:53:07,259 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 09:53:07,275 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 09:53:29,681 INFO /home/habtamu/Desktop/frappe/venv/bin/bench browse demo.localhost --user Administrator
+2024-12-13 09:55:28,002 INFO /home/habtamu/Desktop/frappe/venv/bin/bench use demo.localhost
+2024-12-13 09:55:31,348 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 09:55:31,563 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 09:55:31,568 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 09:55:31,571 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 09:55:31,573 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 09:56:28,450 INFO /home/habtamu/Desktop/frappe/venv/bin/bench new-site demo.localhost --install-app frappe
+2024-12-13 09:56:46,703 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --site demo.localhost --install-app frappe
+2024-12-13 09:57:46,615 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --site demo.localhost install-app frappe
+2024-12-13 09:57:52,411 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 09:57:52,593 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 09:57:52,609 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 09:57:52,634 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 09:57:52,638 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 10:12:56,455 INFO /home/habtamu/Desktop/frappe/venv/bin/bench new-app airplane_mode
+2024-12-13 10:12:56,459 LOG creating new app airplane_mode
+2024-12-13 10:13:50,783 LOG Installing airplane_mode
+2024-12-13 10:13:50,784 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench && /home/habtamu/Desktop/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/habtamu/Desktop/frappe/frappe-bench/apps/airplane_mode 
+2024-12-13 10:13:52,595 DEBUG bench build --app airplane_mode
+2024-12-13 10:13:52,695 INFO /home/habtamu/Desktop/frappe/venv/bin/bench build --app airplane_mode
+2024-12-13 10:13:54,124 DEBUG cd /home/habtamu/Desktop/frappe/frappe-bench && sudo supervisorctl restart frappe:
+2024-12-13 10:13:54,275 WARNING cd /home/habtamu/Desktop/frappe/frappe-bench && sudo supervisorctl restart frappe: executed with exit code 2
+2024-12-13 10:13:54,275 WARNING restarting supervisor group `frappe:` failed. Use `bench restart` to retry.
+2024-12-13 10:14:16,727 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --site demo.localhost install-app airplane_mode
+2024-12-13 10:14:24,427 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 10:14:24,620 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 10:14:24,623 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 10:14:24,655 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 10:14:24,660 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 10:14:53,180 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --site demo.localhost set-config developer_mode 1
+2024-12-13 10:15:00,809 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 10:15:01,022 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 10:15:01,025 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 10:15:01,038 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 10:15:01,046 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 10:25:28,017 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 10:25:28,259 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 10:25:28,261 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 10:25:28,267 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 10:25:28,286 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 11:55:01,388 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 11:55:22,322 INFO /home/habtamu/Desktop/frappe/venv/bin/bench stop
+2024-12-13 11:56:56,923 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 11:56:57,113 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 11:56:57,130 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 11:56:57,132 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 11:56:57,150 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 11:56:58,875 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 11:56:59,056 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 11:56:59,063 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 11:56:59,079 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 11:56:59,087 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 11:57:01,809 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 11:57:02,017 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 11:57:02,017 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 11:57:02,040 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 11:57:02,043 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 11:57:05,697 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 11:57:05,860 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 11:57:05,862 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 11:57:05,863 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 11:57:05,915 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 11:57:59,890 INFO /home/habtamu/Desktop/frappe/venv/bin/bench start
+2024-12-13 11:58:00,123 INFO /home/habtamu/Desktop/frappe/venv/bin/bench serve --port 8000
+2024-12-13 11:58:00,129 INFO /home/habtamu/Desktop/frappe/venv/bin/bench schedule
+2024-12-13 11:58:00,132 INFO /home/habtamu/Desktop/frappe/venv/bin/bench worker
+2024-12-13 11:58:00,151 INFO /home/habtamu/Desktop/frappe/venv/bin/bench watch
+2024-12-13 12:00:01,651 INFO /home/habtamu/Desktop/frappe/venv/bin/bench --verbose --site all backup
